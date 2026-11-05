@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 26px 12px;
+    background: #f7f8fa;
+    color: #17283e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sistema {
+    width: 100%;
+    padding: 22px 22px 12px;
+    background: #fff;
+    border: 1px solid #e6e8eb;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 7px;
+    margin-bottom: 17px;
+    border-bottom: 2px solid #2867dc;
+}
+
+.titulo-secao span {
+    font-size: 18px;
+}
+
+h1, h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #17283e;
+}
+
+.formulario-cadastro {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 11px;
+    row-gap: 13px;
+    align-items: end;
+}
+
+.campo {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 5px;
+    color: #233249;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    min-width: 0;
+    height: 25px;
+    padding: 4px 8px;
+    border: 1px solid #d2d8e0;
+    border-radius: 3px;
+    outline: none;
+    background: #fff;
+    color: #1e293b;
+    font: 11px Arial, sans-serif;
+}
+
+.campo input:focus,
+.campo select:focus,
+.formulario-busca input:focus {
+    border-color: #4380e8;
+    box-shadow: 0 0 0 2px rgba(40, 103, 220, .1);
+}
+
+.campo-estoque {
+    grid-column: 1;
+}
+
+.botoes-formulario {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 1px;
+}
+
+.botao {
+    min-width: 142px;
+    height: 29px;
+    padding: 0 15px;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.botao-azul {
+    background: #2867dc;
+}
+
+.botao-azul:hover {
+    background: #1d55bd;
+}
+
+.botao-cinza {
+    background: #e8edf4;
+    color: #34445b;
+}
+
+.mensagem {
+    margin-bottom: 12px;
+    padding: 8px 10px;
+    border: 1px solid #bfe4ca;
+    border-radius: 3px;
+    background: #effaf2;
+    color: #206a3b;
+    font-size: 11px;
+}
+
+.mensagem-erro {
+    border-color: #edc4c4;
+    background: #fff1f1;
+    color: #a12d2d;
+}
+
+.titulo-inventario {
+    display: flex;
+    min-height: 34px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #2867dc;
+}
+
+.nome-inventario {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
+.nome-inventario span {
+    font-size: 18px;
+}
+
+.nome-inventario h2 {
+    font-size: 17px;
+}
+
+.formulario-busca {
+    display: flex;
+    width: 235px;
+    max-width: 55%;
+    align-items: center;
+    gap: 4px;
+}
+
+.formulario-busca input {
+    width: 100%;
+    min-width: 0;
+    height: 26px;
+    padding: 4px 7px;
+    border: 1px solid #d7dce4;
+    border-radius: 3px;
+    outline: none;
+    font: 10px Arial, sans-serif;
+    color: #334155;
+}
+
+.formulario-busca input::placeholder {
+    color: #a6adb8;
+}
+
+.botao-busca {
+    display: flex;
+    flex: 0 0 31px;
+    width: 31px;
+    height: 31px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    background: #edf3fb;
+    color: #2596d4;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+}
+
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: #f0f4f9;
+}
+
+th {
+    padding: 8px 7px;
+    color: #202c3e;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+td {
+    padding: 7px;
+    border-bottom: 1px solid #edf0f4;
+    color: #202b3a;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.botao-excluir {
+    display: inline-flex;
+    width: 23px;
+    height: 23px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e9a39f;
+    border-radius: 50%;
+    background: #c8322e;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.vazio {
+    padding: 18px;
+    text-align: center;
+    color: #7b8491;
+}
+
+.modal-fundo[hidden] {
+    display: none;
+}
+
+.modal-fundo {
+    position: fixed;
+    z-index: 20;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(20, 31, 48, .38);
+}
+
+.modal-venda {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    padding: 22px;
+    border: 1px solid #dce2ea;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(0,0,0,.2);
+}
+
+.modal-venda h2 {
+    margin-bottom: 18px;
+}
+
+.campo-modal {
+    margin-bottom: 13px;
+}
+
+.campo-modal input,
+.campo-modal select {
+    height: 32px;
+}
+
+.botoes-modal {
+    display: flex;
+    gap: 9px;
+    margin-top: 16px;
+}
+
+.botoes-modal .botao {
+    min-width: 0;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 7px;
+    right: 11px;
+    border: 0;
+    background: transparent;
+    color: #657185;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.ajuda-modal {
+    margin-top: 12px;
+    color: #758195;
+    font-size: 10px;
+}
+
+@media (max-width: 620px) {
+    body {
+        padding: 12px 8px;
+    }
+
+    .sistema {
+        padding: 17px 12px 10px;
+    }
+
+    .formulario-cadastro {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 12px;
+    }
+
+    .campo-estoque {
+        grid-column: 1;
+    }
+
+    .botoes-formulario {
+        grid-column: 1 / -1;
+        flex-wrap: wrap;
+    }
+
+    .titulo-inventario {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .formulario-busca {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .formulario-busca input {
+        flex: 1;
+    }
+}
+
+@media (max-width: 360px) {
+    .formulario-cadastro {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-estoque,
+    .botoes-formulario {
+        grid-column: 1;
+    }
+}
